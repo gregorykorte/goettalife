@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Goetta Life</title>
+<meta content="Just a goetta appreciation site. Not meant to endorse any particular grocer, butcher or recipe." name="description"/>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&amp;family=News+Cycle:wght@400;700&amp;family=Libre+Baskerville:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    /* Palette: sepia newsprint */
+    :root{
+      --paper: #f2e6cf;
+      --ink: #1f140d;
+      --accent: #7a4b1d; /* warm brown */
+      --border: #c7b89a;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      background: radial-gradient(1200px 800px at 10% 0%, rgba(0,0,0,.05), transparent 60%),
+                  repeating-radial-gradient(circle at 80% 20%, rgba(0,0,0,.04), rgba(0,0,0,.04) 1px, transparent 1px 3px),
+                  var(--paper);
+      color:var(--ink);
+      font-family: "Libre Baskerville", Georgia, "Times New Roman", Times, serif;
+      line-height:1.35;
+    }
+    .wrap{max-width: 860px; margin: 3.5rem auto; padding: 0 1rem}
+    .panel{background: linear-gradient(180deg, #f6ecd7 0%, #efe0c2 100%); border: 2px solid var(--border); border-radius: 6px; box-shadow: 0 25px 40px rgba(0,0,0,.15), inset 0 0 0 1px rgba(0,0,0,.06); overflow:hidden}
+    .rules{border-top:3px double var(--border); border-bottom:3px double var(--border); padding:.5rem 0; margin:.75rem 0}
+    header{padding:2rem 1.5rem 1rem; text-align:center}
+    .logo{font-family:"UnifrakturCook", "Old English Text MT", "Cloister Black", fantasy; font-size: clamp(2.4rem, 6vw, 4.2rem); letter-spacing:.5px; line-height:1}
+    .dek{font-family:"News Cycle", Arial, Helvetica, sans-serif; text-transform:uppercase; letter-spacing:.12em; color:var(--accent); font-weight:700; margin-top:.35rem}
+
+    /* Photo on top */
+    .photo{padding: 0 1.25rem 0}
+    figure.photo{
+      margin: 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); background:#eee0c3;
+    }
+    .photo img{display:block; width:100%; height:auto; filter: sepia(55%) contrast(0.95) saturate(0.9);
+      mix-blend-mode:multiply}
+    .credit{font-size:.70rem; padding:.5rem 0 0; color:#5a402c; text-align: right;}
+    .credit a{color:inherit; text-decoration:underline dotted}
+
+    /* Headline block under photo */
+    .headline{padding:1.25rem 1.5rem 0; text-align:center}
+    .kicker{font-variant:small-caps; letter-spacing:.08em}
+    h1{font-family:"News Cycle", Arial, Helvetica, sans-serif; font-size: clamp(2rem,5vw,3rem); margin:.25rem 0 .25rem; line-height:1}
+    .split{display:inline-block; letter-spacing:.12em; border-top:3px double var(--border); border-bottom:3px double var(--border); padding:.35rem .5rem}
+    .split b{letter-spacing:.25em}
+    .tag{font-style:italic}
+
+    .bottom{ text-align:center; padding: 1rem 1.25rem 1.5rem; background:linear-gradient(180deg, rgba(0,0,0,.03), transparent); border-top:1px solid var(--border); font-family:"News Cycle", Arial, sans-serif}
+    .ask{font-weight:700; text-transform:uppercase; letter-spacing:.1em}
+    .links{margin-top:.5rem; display:flex; gap:.75rem; flex-wrap:wrap; justify-content:center}
+    .links a{border:1px solid var(--border); padding:.35rem .6rem; border-radius:4px; text-decoration:none; color:inherit}
+    .links a:hover{background:rgba(0,0,0,.04)}
+
+    @media (max-width: 760px){
+      .wrap{margin:2rem auto}
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+<div aria-label="1950s style advertisement" class="panel" role="region">
+<header>
+<div aria-label="Goetta Life" class="logo">Goetta Life</div>
+<div class="dek">Cincinnati's Breakfast Tradition</div>
+<div aria-hidden="true" class="rules"></div>
+</header>
+<!-- Photo on top -->
+<section class="photo">
+<figure class="photo">
+<!-- Replace src with your hosted path, e.g., goetta.jpg -->
+<img alt="Two slices of crispy pan-fried goetta on a patterned plate" src="goetta.jpg"/>
+<figcaption class="credit">Photo credit: <a href="https://www.flickr.com/people/49438472@N00/" rel="noopener noreferrer" target="_blank">Cassaendra</a>. Used under <a href="https://creativecommons.org/licenses/by-nd/2.0/deed.en" rel="noopener noreferrer" target="_blank">Creative Commons 2.0</a> license.</figcaption>
+</figure>
+</section>
+<!-- Headline under image -->
+<section class="headline">
+<div class="kicker">Pork. Pin oats. Patience.</div>
+<h1 class="split"><span>UNFOR</span>–<b>GOETTA</b>–<span>BLE</span></h1>
+<p class="tag">Just a goetta appreciation site. Not intended to endorse any particular grocer, butcher, recipe or historic account.</p>
+</section>
+<div class="bottom">
+<div class="ask"><a href="https://abouteating.com/2019/02/20/are-you-ready-for-goetta/" rel="noopener noreferrer" target="_blank">Recipes</a> • <a href="https://www.citybeat.com/food-drink/cincinnati-goetta-a-delectable-history-is-a-new-book-about-this-classic-cincinnati-dish-12217325" rel="noopener noreferrer" target="_blank">History</a> • <a href="https://goetta.com/goettafest/" rel="noopener noreferrer" target="_blank">Goettafest</a></div>
+</div>
+</div>
+</div>
+</body>
+</html>
