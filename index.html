@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <script defer data-domain="goettalife.com" src="https://stats.4gk.us/js/script.js"></script>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Goetta Life</title>
-<meta content="Just a goetta appreciation site. Not meant to endorse any particular grocer, butcher or recipe." name="description"/>
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&amp;family=News+Cycle:wght@400;700&amp;family=Libre+Baskerville:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<style>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Goetta Life</title>
+  <meta content="Just a goetta appreciation site. Not meant to endorse any particular grocer, butcher or recipe." name="description"/>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=News+Cycle:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
     /* Palette: sepia newsprint */
     :root{
       --paper: #f2e6cf;
@@ -38,8 +37,7 @@
     figure.photo{
       margin: 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); background:#eee0c3;
     }
-    .photo img{display:block; width:100%; height:auto; filter: sepia(55%) contrast(0.95) saturate(0.9);
-      mix-blend-mode:multiply}
+    .photo img{display:block; width:100%; height:auto; filter: sepia(55%) contrast(0.95) saturate(0.9); mix-blend-mode:multiply}
     .credit{font-size:.70rem; padding:.5rem 0 0; color:#5a402c; text-align: right;}
     .credit a{color:inherit; text-decoration:underline dotted}
 
@@ -60,34 +58,86 @@
     @media (max-width: 760px){
       .wrap{margin:2rem auto}
     }
+
+    /* ========= Footer (namespaced to avoid conflicts) ========= */
+    .gl-footer{
+      max-width: 68ch;
+      margin: 2rem auto 3rem;
+      padding-top: .1rem;
+      text-align: center;
+      font-family: "News Cycle", Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.45;
+      color: #5a402c; /* harmonizes with .credit */
+    }
+    .gl-footer__rule{
+      height: 1px;
+      margin: 1rem 0 .75rem;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+    .gl-footer > div + div { margin-top: .1rem; }
+    .gl-footer a{
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-thickness: .06em;
+      text-underline-offset: .18em;
+    }
+    .gl-footer a:hover,
+    .gl-footer a:focus { text-decoration-thickness: .12em; }
+    @media (max-width: 480px){
+      .gl-footer { font-size: .85rem; padding-left: 1rem; padding-right: 1rem; }
+    }
+    /* Own the gap in one place; keep everything else lean */
+    .wrap { margin-bottom: 0; }                 /* was 3.5rem */
+    .bottom { padding-bottom: 0.75rem; }        /* was 1.5rem */
+    .gl-footer { margin-top: 1.25rem;           /* new single gap owner */
+                 padding-top: 0.5rem; }         /* was 1rem */
+    .gl-footer__rule { margin-top: 0; }         /* was 1rem */
+
+
+
   </style>
 </head>
 <body>
-<div class="wrap">
-<div aria-label="1950s style advertisement" class="panel" role="region">
-<header>
-<div aria-label="Goetta Life" class="logo">Goetta Life</div>
-<div class="dek">Cincinnati's Breakfast Tradition</div>
-<div aria-hidden="true" class="rules"></div>
-</header>
-<!-- Photo on top -->
-<section class="photo">
-<figure class="photo">
-<!-- Replace src with your hosted path, e.g., goetta.jpg -->
-<img alt="Two slices of crispy pan-fried goetta on a patterned plate" src="goetta.jpg"/>
-<figcaption class="credit">Photo credit: <a href="https://www.flickr.com/people/49438472@N00/" rel="noopener noreferrer" target="_blank">Cassaendra</a>. Used under <a href="https://creativecommons.org/licenses/by-nd/2.0/deed.en" rel="noopener noreferrer" target="_blank">Creative Commons 2.0</a> license.</figcaption>
-</figure>
-</section>
-<!-- Headline under image -->
-<section class="headline">
-<div class="kicker">Pork. Pin oats. Patience.</div>
-<h1 class="split"><span>UNFOR</span>–<b>GOETTA</b>–<span>BLE</span></h1>
-<p class="tag">Just a goetta appreciation site. Not intended to endorse any particular grocer, butcher, recipe or historic account.</p>
-</section>
-<div class="bottom">
-<div class="ask"><a href="https://abouteating.com/2019/02/20/are-you-ready-for-goetta/" rel="noopener noreferrer" target="_blank">Recipes</a> • <a href="https://www.citybeat.com/food-drink/cincinnati-goetta-a-delectable-history-is-a-new-book-about-this-classic-cincinnati-dish-12217325" rel="noopener noreferrer" target="_blank">History</a> • <a href="https://goetta.com/goettafest/" rel="noopener noreferrer" target="_blank">Goettafest</a></div>
-</div>
-</div>
-</div>
+  <div class="wrap">
+    <div aria-label="1950s style advertisement" class="panel" role="region">
+      <header>
+        <div aria-label="Goetta Life" class="logo">Goetta Life</div>
+        <div class="dek">Cincinnati's Breakfast Tradition</div>
+        <div aria-hidden="true" class="rules"></div>
+      </header>
+
+      <!-- Photo on top -->
+      <section class="photo">
+        <figure class="photo">
+          <!-- Replace src with your hosted path, e.g., goetta.jpg -->
+          <img alt="Two slices of crispy pan-fried goetta on a patterned plate" src="goetta.jpg"/>
+          <figcaption class="credit"></figcaption>
+        </figure>
+      </section>
+
+      <!-- Headline under image -->
+      <section class="headline">
+        <div class="kicker">Pork. Pin oats. Pepper. Patience.</div>
+        <h1 class="split"><span>UNFOR</span>–<b>GOETTA</b>–<span>BLE</span></h1>
+      </section>
+
+      <div class="bottom">
+        <div class="ask">
+          <a href="https://abouteating.com/2019/02/20/are-you-ready-for-goetta/" rel="noopener noreferrer" target="_blank">Recipes</a>
+          •
+          <a href="https://www.citybeat.com/food-drink/cincinnati-goetta-a-delectable-history-is-a-new-book-about-this-classic-cincinnati-dish-12217325" rel="noopener noreferrer" target="_blank">History</a>
+          •
+          <a href="https://goetta.com/goettafest/" rel="noopener noreferrer" target="_blank">Goettafest</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="gl-footer" role="contentinfo">
+    <div class="gl-footer__rule" aria-hidden="true"></div>
+    <div>Just a goetta appreciation site. Not intended to endorse any particular grocer, butcher, recipe or historic account. A <a href="https://thingish.com">Thingish</a> Thing.</div>
+    <div>© 2025 goettalife.com. Photo credit: <a href="https://www.flickr.com/people/49438472@N00/" rel="noopener noreferrer" target="_blank">Cassaendra</a>. Used under <a href="https://creativecommons.org/licenses/by-nd/2.0/deed.en" rel="noopener noreferrer" target="_blank">Creative Commons 2.0</a> license.</div>
+  </footer>
 </body>
 </html>
